@@ -3,28 +3,60 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import {
+  HomePage,
+  PrincipalPage,
+  DescripcionPage,
+  LoginPage,
+  RegistroPage,
+  TabsPage,
+  InicioPage,
+  HcarreraPage,
+  HfinanciamientoPage
+} from "../pages/index.paginas";
+import { UniversityServiceProvider } from '../providers/university-service/university-service';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    PrincipalPage,
+    DescripcionPage,
+    LoginPage,
+    RegistroPage,
+    TabsPage,
+    InicioPage,
+    HcarreraPage,
+    HfinanciamientoPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    HttpModule,
+    IonicModule.forRoot(MyApp, {
+      backButtonText: 'Atrás'
+     })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    PrincipalPage,
+    DescripcionPage,
+    LoginPage,
+    RegistroPage,
+    TabsPage,
+    InicioPage,
+    HcarreraPage,
+    HfinanciamientoPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    UniversityServiceProvider
   ]
 })
 export class AppModule {}

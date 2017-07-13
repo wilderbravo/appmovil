@@ -1,14 +1,25 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="blue" align="center">
     <ion-title>
-      Ionic Blank
+      Universidades
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <ion-searchbar [(ngModel)]="searchQuery" (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-list>
+      <ion-item-sliding *ngFor="let universidad of university">
+        <ion-item (click) = "mostrarDetalle(universidad)">
+            <ion-avatar item-left>
+              <img src= "{{ universidad.picture.thumbnail }}">
+            </ion-avatar>
+            <h2> {{ universidad.name.first}}  {{ universidad.name.last}}</h2>
+            <p>{{ universidad.email}}</p>
+            <p>{{ universidad.cell}}</p>
+            <p>Cat. A</p>            
+            <!--ion-note item-end>Cat. A</ion-note-->
+        </ion-item>
+      </ion-item-sliding>
+  </ion-list>
 </ion-content>

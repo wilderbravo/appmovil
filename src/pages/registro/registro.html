@@ -1,0 +1,54 @@
+<ion-header>
+
+  <ion-navbar color="blue">
+    <ion-title>Registro</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <form>
+      <ion-item>
+        <ion-input type="text" name="usuario" placeholder="Usuario"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" name="password" placeholder="Contraseña"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" name="repassword" placeholder="Repetir contraseña"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" name="nombre" placeholder="Nombres"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" name="apellido" placeholder="Apellidos"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="email" name="email" placeholder="Correo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" name="celular" placeholder="Teléfono"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" name="cedula" placeholder="Cédula"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Ciudad</ion-label>
+        <ion-select >
+          <ion-option value="gye">Guayaquil</ion-option>
+          <ion-option value="uio">Quito</ion-option>
+          <ion-option value="loj">Loja</ion-option>
+          <ion-option value="cue">Cuenca</ion-option>
+          <ion-option value="qvo">Quevedo</ion-option>
+          <ion-option value="sto">Sto. Domingo</ion-option>
+        </ion-select>
+      </ion-item>
+    </form>
+  </ion-list>
+  <br>  
+  <ion-list>
+      <button block ion-button color="blue" (click)="crear_cuenta()">Crear cuenta</button>
+  </ion-list>
+  <h6 style="color:#446E9B; font-size:x-small" align="center">@Secretaría de Educación Superior, Ciencia, Tecnología e Innovación</h6>
+</ion-content>

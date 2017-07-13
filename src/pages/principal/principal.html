@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar color="blue" >
+    <ion-title>Carreras</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<div align="center"><img class="image" src="{{ universidad.picture.large }}" alt=""></div>
+<h2 style="color:#446E9B;" align="center">{{universidad.name.first}}</h2>
+<!--p align="center"> {{ universidad.abrev}} </p-->
+<!--p align="center"> {{ universidad.carreras[0]['carrera']}} </p-->
+<ion-list>
+    <ion-item-sliding *ngFor="let carreras of universidad.carreras; let i = index" >
+      <ion-item (click) = "mostrarDescripcion(carreras)">
+          <!--ion-avatar item-left>
+            <img [src]="universidad.img">
+          </ion-avatar-->
+          <!--ion-avatar item-left>
+            <ion-icon name="school"></ion-icon>
+          </ion-avatar-->
+          <ion-avatar item-right>
+            <ion-icon name="md-arrow-round-forward"></ion-icon>
+          </ion-avatar>
+          <h2> {{ carreras['carrera'] }} </h2>
+          <p> {{ carreras['facultad'] }} </p>
+      </ion-item>
+    </ion-item-sliding>
+</ion-list>
+<!--button ion-button block color="black" (click)="regresarLlamadas()">Regresar</button-->
+</ion-content>

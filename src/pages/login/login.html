@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar class="login-header" color="blue">
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content  scroll="false">
+    <div align="center"><img width="200px" height="200px" src="assets/img/login-system.png" alt=""></div>
+    <br>
+    <div style="color:#446E9B;" class="text-to-change">
+      <div align="center">Oferta académica de las</div>
+      <div align="center">Universidades del</div>
+      <div align="center">Ecuador</div>
+      <br>
+    </div>
+    <form>
+        <ion-item>
+          <ion-input [(ngModel)]="todo.usuario" type="text" name="usuario" placeholder="Usuario"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input [(ngModel)]="todo.contrasena" type="password" name="contrasena" placeholder="Contraseña"></ion-input>
+        </ion-item>
+        <!--ion-item>
+          <ion-label>Recordarme</ion-label>
+          <ion-checkbox color="blue" checked="false"></ion-checkbox>
+        </ion-item-->
+    </form>
+    <br>
+<ion-list>
+    <button block ion-button color="blue" (click)="login()">Empezar</button>
+    <br>
+    <h6 style="color:#446E9B; font-size:x-small" align="center">@Secretaría de Educación Superior, Ciencia, Tecnología e Innovación</h6>
+</ion-list>
+</ion-content>

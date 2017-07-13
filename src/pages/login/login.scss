@@ -1,0 +1,21 @@
+page-login {
+
+}
+.login-container {
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efad62), color-stop(100%,#f7d47c));
+    background: -webkit-linear-gradient(top, #80ccff 0%,#80ccff 100%);
+}
+.login-header {
+  //color:blue;
+  text-align:center;
+  font-size:300%;
+}
+.login-form {
+  border:.5px solid #fff;
+  background:#4facff;
+  border-radius:10px;
+  box-shadow:0px 0px 10px #000;
+}
